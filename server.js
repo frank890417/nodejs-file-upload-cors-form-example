@@ -18,6 +18,8 @@ app.post("/upload_files", upload.array("files"), uploadFiles);
 function uploadFiles(req, res, next) {
     // console.log(req)
     console.log(req.body);
+    console.log(req.files)
+    // console.log(JSON.stringify(req))
     res.send("File uploaded successfully.");
 }
 app.listen(5001, () => {
